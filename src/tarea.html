@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌟 EMPRESA SANSANTEC⭐</title>
+<title>✨ CUESTIONARIO </title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  h1 {
+    color: #007bff; /* Azul celeste */
+    text-align: center;
+  }
+  .question {
+    margin-bottom: 20px;
+  }
+  .options {
+    list-style-type: none;
+    padding: 0;
+  }
+  .options li {
+    margin-bottom: 10px;
+  }
+  .btn {
+    background-color: #007bff; /* Azul celeste */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px; /* Botones redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #0056b3; /* Azul oscuro */
+  }
+  .input-group {
+    display: flex;
+    align-items: center;
+  }
+  .input-group input {
+    flex: 1;
+    border-radius: 20px;
+    padding: 8px 15px;
+    border: 1px solid #007bff;
+  }
+  .input-group button {
+    border-radius: 20px;
+    margin-left: 10px;
+  }
+</style>
+</head>
+<body>
+
+<h1>🌟EMPRESA SANSANTEC🌟</h1>
+<h1>✨ CUESTIONARIO 🎁</h1>
+<div>
+  <img src="https://github.com/CHICO-CP/cuestionario/raw/main/IMG-20240220-WA0027.jpg" alt="Logo de la empresa" style="display: block; margin: auto; max-width: 80%;">
+</div>
+
+<div id="usernameInput" class="question">
+	<p>Por favor, ingrese su nombre de usuario:</p>
+  <div class="input-group">
+    <input type="text" id="username" placeholder="Nombre de usuario">
+    <button class="btn" onclick="startSurvey()">Comenzar encuesta</button>
+  </div>
+</div>
+
+<div id="questionsList" style="display: none;">
+  <div class="question" id="question1">
+    <p>¿Usted consume productos de la cafetería?</p>
+    <ul class="options">
+      <li><input type="radio" name="question1" value="Sí"> Sí</li>
+      <li><input type="radio" name="question1" value="No"> No</li>
+    </ul>
+    <button class="btn" onclick="checkFirstQuestion()">Seguir</button>
+  </div>
+
+  <div class="question" id="question3" style="display: none;">
+    <p>¿Qué tan amable es el personal?</p>
+    <ul class="options">
+      <li><input type="radio" name="question3" value="Bueno"> Bueno</li>
+      <li><input type="radio" name="question3" value="Regular"> Regular</li>
+      <li><input type="radio" name="question3" value="Malo"> Malo</li>
+    </ul>
+  </div>
+
+  <div class="question" id="question4" style="display: none;">
+    <p>¿Qué tan rápido es el servicio?</p>
+    <ul class="options">
+      <li><input type="radio" name="question4" value="Rápido"> Rápido</li>
+      <li><input type="radio" name="question4" value="Regular"> Regular</li>
+      <li><input type="radio" name="question4" value="Tardado"> Tardado</li>
+    </ul>
+  </div>
+
+  <div class="question" id="question5" style="display: none;">
+    <p>¿Considera que los precios son accesibles para su consumo?</p>
+    <ul class="options">
+      <li><input type="radio" name="question5" value="Sí"> Sí</li>
+      <li><input type="radio" name="question5" value="No"> No</li>
+      <li><input type="radio" name="question5" value="Regular"> Regular</li>
+    </ul>
+  </div>
+
+  <div class="question" id="question6" style="display: none;">
+    <p>¿Considera que el personal de la cafetería es higiénico?</p>
+    <ul class="options">
+      <li><input type="radio" name="question6" value="Sí"> Sí</li>
+      <li><input type="radio" name="question6" value="No"> No</li>
+      <li><input type="radio" name="question6" value="Regular"> Regular</li>
+    </ul>
+  </div>
+
+  <div class="question" id="question7" style="display: none;">
+    <p>¿Los alimentos a la venta son variados y nutritivos?</p>
+    <ul class="options">
+      <li><input type="radio" name="question7" value="Sí"> Sí</li>
+      <li><input type="radio" name="question7" value="Algunas veces"> Algunas veces</li>
+      <li><input type="radio" name="question7" value="No"> No</li>
+    </ul>
+  </div>
+
+  <div class="question" id="question8" style="display: none;">
+    <p>¿Los productos de la cafetería están en óptimas condiciones?</p>
+    <ul class="options">
+      <li><input type="radio" name="question8" value="Sí"> Sí</li>
+      <li><input type="radio" name="question8" value="A veces"> A veces</li>
+      <li><input type="radio" name="question8" value="No"> No</li>
+    </ul>
+  </div>
+
+  <div class="question" id="question9" style="display: none;">
+    <p>¿Cuánto gasta en la cafetería regularmente?</p>
+    <ul class="options">
+      <li><input type="radio" name="question9" value="20-40"> $20-40</li>
+      <li><input type="radio" name="question9" value="50-100"> $50-100</li>
+      <li><input type="radio" name="question9" value="Más de 100"> Más de $100</li>
+    </ul>
+  </div>
+  
+  <div class="question" id="question10" style="display: none;">
+    <p>¿Te gustaría que hubiera más variedad de productos?</p>
+    <ul class="options">
+      <li><input type="radio" name="question10" value="Sí"> Sí</li>
+      <li><input type="radio" name="question10" value="A veces"> A veces</li>
+      <li><input type="radio" name="question10" value="No"> No</li>
+    </ul>
+    <button class="btn" onclick="saveAndExit()">Guardar cuestionario y salir</button>
+  </div>
+</div>
+
+<script>
+  let username = '';
+  let responses = {};
+
+  function startSurvey() {
+    username = document.getElementById('username').value.trim();
+    if (username === '') {
+      alert('Por favor, ingrese un nombre de usuario válido.');
+    } else {
+      document.getElementById('usernameInput').style.display = 'none';
+      document.getElementById('questionsList').style.display = 'block';
+    }
+  }
+
+  function checkFirstQuestion() {
+    let firstQuestionAnswer = document.querySelector('input[name="question1"]:checked');
+    if (firstQuestionAnswer && firstQuestionAnswer.value === 'Sí') {
+      showNextQuestions();
+    } else if (firstQuestionAnswer) {
+      showNextQuestions();
+    } else if (firstQuestionAnswer && firstQuestionAnswer.value === 'No') {
+      alert('Gracias por tu respuesta.');
+    } else {
+      alert('Por favor, seleccione una respuesta.');
+    }
+  }
+
+  function showNextQuestions() {
+    let questions = document.querySelectorAll('.question');
+    questions.forEach(question => {
+      question.style.display = 'block';
+    });
+    document.getElementById('question1').style.display = 'none'; // Ocultar la primera pregunta
+  }
+</script>
+
+<h2>Integrantes de la empresa:</h2>
+<ul>
+  <li>Pedro Julián Avendaño Gálvez</li>
+  <li>Yurem Santos Martínez</li>
+  <li>Ronnie Jiménez Trejo</li>
+  <li>Angel suriel Orozco Ruiz</li>
+  <li>Heydi Yazmin rey cruz</li>
+</ul>
+
+</body>
+  </html>
